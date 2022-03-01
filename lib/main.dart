@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        colorSchemeSeed: Colors.pink,
       ),
       home: HomePage(),
     );
@@ -25,6 +25,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+          // backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Text('BMI Calculator',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ))),
+    );
   }
 }
